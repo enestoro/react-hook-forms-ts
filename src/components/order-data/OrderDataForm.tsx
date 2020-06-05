@@ -12,8 +12,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import {useForm, FormContext, Controller} from 'react-hook-form';
 import * as yup from 'yup';
-import TextField from "@material-ui/core/TextField/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
+
 
 const useStyles = makeStyles({
     checkbox: {
@@ -60,7 +59,7 @@ export default function OrderForm() {
                         <FormControlLabel
                             className={classes.checkbox}
                             control={
-                                <Checkbox checked={checked} onChange={handleChange} inputRef={form.register} name="shippingBillingAddressDiffer" />
+                                <Checkbox onChange={handleChange} inputRef={form.register} name="shippingBillingAddressDiffer" />
                             }
                             label="Billing and shipping address are not the same"
                         />
