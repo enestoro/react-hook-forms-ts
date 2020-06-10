@@ -39,7 +39,6 @@ export default function OrderForm() {
     const [checked, setChecked] = React.useState(false);
     const handleChange = (event: { target: { checked: React.SetStateAction<boolean>; }; }) => {
         setChecked(event.target.checked);
-        form.setValue('shippingBillingAddressDiffer', event.target.checked);
     };
     const form = useForm({
         validationSchema: schema,
